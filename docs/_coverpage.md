@@ -8,6 +8,6 @@
 
 - تحت گواهی‌نامه Creative Commons Attribution 4.0 International
 
-[گیت‌هاب](https://github.com/makbn/rw_open_manifesto)
+[گیت‌هاب](https://github.com/makbn/remote_working_open_manifesto)
 [شروع](#start)
 
