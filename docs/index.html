@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>سند آزاد دورکاری</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+  <meta name="description" content="شناسنامه پیاده سازی همکاری و مدیریت پروژه به روش دورکاری">
+  <meta property="og:title" content="سند آزاد دورکاری" />
+  <meta property="og:url" content="https://remoteworking.sakku.cloud/" />
+  <meta property="og:image" content="http://remoteworking.sakku.cloud/assets/media/logo.svg" /> 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./assets/css/vue-rtl.css">
 </head>
@@ -16,6 +19,25 @@
       maxLevel: 3,
       name: 'سند آزاد دورکاری',
       coverpage: true,
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else {
+              url = 'https://github.com/makbn/remote_working_open_manifesto/blob/master/docs/' + vm.route.file
+            }
+            var editHtml = '[:memo: ویرایش فایل](' + url + ')\n'
+
+            return editHtml
+              + html
+              + '\n\n----\n\n'
+              + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+          })
+        }
+        ],
       rtl: {
             body: "rtl",
             side: "rtl",
