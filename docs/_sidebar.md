@@ -1,0 +1,6 @@
+- [مقدمه](README.md)
+- [نقشه ذهنی](mind_map.md)
+- [تعریف دورکاری](/what_is_remoteworking/what_is_remote_working.md)
+  - [انواع](/what_is_remoteworking/types_of_remoteworking.md)
+    - [دورکاری تمام وقت](/what_is_remoteworking/fulltime_remoteworking.md)
+    - [دورکاری پاره وقت](/what_is_remoteworking/partial_remoteworking.md)
